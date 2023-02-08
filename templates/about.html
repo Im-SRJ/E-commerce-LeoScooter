@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">    
+
+<!-- Mirrored from leoelectric.in/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:41:45 GMT -->
+<head>
+    <!-- Basic -->    
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>About Leo electric</title>
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    
+    <!-- favicon & bookmark -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&amp;display=swap" rel="stylesheet"> 
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/twentytwenty.css' %}"  type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fancybox/jquery.fancybox.min.css' %}" type="text/css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+
+    
+</head>
+<body >
+
+    <!--Main Wrapper Start-->
+    <div class="wrapper" id="top">
+        <!--Header Start -->
+        <header class="main-header menu-absolute transparent light-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 logo">
+                        <a href="index.html" title="Wheels Car">
+                            <img src="{% static 'images/car-dark-logo.png' %}" alt="car" class="regular-logo">
+                            <img src="{% static 'images/car-dark-logo.png' %}" alt="car" class="sticky-logo">
+                        </a>
+                        <div class="menu-icon">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 menu-conainer">
+                        <nav class="site-navigation">
+                            <ul class="main-menu">
+                               <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Leo Electric</a></li>
+                                <li><a href="{% url 'hasten' %}">Hasten</a></li>
+                                <li><a href="{% url 'testdrive' %}">Book Test Drive</a></li>
+                                 <!--
+                                <li class="dropdown">
+                                    <a href="#engine">Specials</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Dropdown menu 1</a></li>
+                                        <li><a href="#">Dropdown menu 2</a></li>
+                                        <li><a href="#">Dropdown menu 3</a></li>
+                                        <li><a href="#">Dropdown menu 4</a></li>
+                                    </ul> 
+                                </li>
+                                -->
+                                <li><a href="{% url 'careers' %}">Careers</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'profile' %}">{{user.username}}</a></li>
+                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                {% else %}
+                                <li><a href="{% url 'userlogin' %}">Login</a></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header End-->
+        <!-- Content Section Start -->   
+       <div class="main-container">
+            <!-- About Section Start -->
+           <section id="accessories" class="accessories-section pb-0" style="padding-top: 140px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 text-center">
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase">Who We Are </h2>
+                            </div>
+                            <div class="text-block text-lead">
+                                <p>Our company key objective is creating and facilitating electric mobility across the country.</p>
+                                <p>Our mission to create electric vehicles that can drive our present towards a sustainable future.</p>
+                            </div>
+                            
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase">What We Do</h2>
+                            </div>
+                            <div class="text-block text-lead">
+                                <p>We are engaged in the manufacturing of Electric Vehicles .LEO ELECTRIC is produced by using cutting edge technology; quality approved component and innovative ideas from our in-house RND. Further, we keep the diverse specifications, demands and details given by the clients in mind while developing the whole product range. LEO is highly recommended for its user friendly nature, long battery backup, advance technology, low maintenance requirement, long functional life, smooth functioning, elegant look, perfect design, accurate dimension and many other features. We offer innovative ideas of our professionals. We are offering vehicle and battery warranty for our Vehicles. Most of the Vehicles components are made from in house and we are on the way to 100 % indigenous product.</p>
+                                
+                            </div>
+                            
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase">Our Mission</h2>
+                            </div>
+                            <div class="text-block text-lead">
+                                <p>Our mission to create electric vehicles that can drive our present towards a sustainable future.</p>
+                            </div>
+                            
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase">Our Vision</h2>
+                            </div>
+                            <div class="text-block text-lead">
+                                <p>Our vision is to become a leading brand in providing customized electric mobility experiences through cutting edge technology. In view of this, we have created a comprehensive roadmap to establish a dynamic Electric Vehicle ecosystem by investing in next generation technology solutions and globally competitive product, to drive adoption of sustainable mobility.</p>
+                            </div>
+                            <div class="btn-wrapper">
+                                <a href="{% url 'contact' %}" class="btn btn-primary has-icon"><span>Contact Us </span><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'images/accessories-bg.png' %}" alt="">
+            </section>
+       </div>
+        <!-- Content Section End -->   
+        <!--footer Start-->   
+        <footer class="site-footer">
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-contet">
+                                    <img src="{% static 'images/car-dark-logo.png' %}" class="footer-logo" alt="">
+                                    <p style="color: var(--dark-gray-2);">LEO ELECTRIC Is a 100% Indian electric vehicles manufacturing company with a mission of balancing performance, range, driving comfort, guarantee of complete safety and affordability to build electric vehicles in the market with an aim to go green - go electric.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Useful Links</h4>
+                                </div>
+                                <div class="widget-contet footer-menu">
+                                    <ul class="menu">
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About Us</a></li>
+                                        <li><a href="{% url 'testdrive' %}">Book Test Drive</a></li>
+                                        <li><a href="{% url 'careers' %}">Careers</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Contact Info</h4>
+                                </div>
+                                <div class="widget-contet contact-info">
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-phone"></i>
+                                        <h3>Phone</h3>
+                                        <span><a>18005722339</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <h3>Email</h3>
+                                        <span><a>info@leoelectric.in</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h3>Address</h3>
+                                        <span>Plot No. 157 / 4 / 9,<br> 1st Floor, Kishangarh, Vasant Kunj,<br> Delhi - 110070 <br> Landmark: Ambience Tower.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <div class="container">
+                    <div class="copyright-text">© 2021 Leo Electric all Rights Reserved &nbsp; Website Design  by: &nbsp;<a target="" href="javascript:void(0)">Cyberflax Technologies</a></div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->  
+    </div>
+    <!--Main Wrapper End-->
+    <!-- Vendor -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/cascading-select.js' %}"></script>        
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>     
+    <script src="{% static 'js/onpagescroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+    <script src="{% static 'js/fancybox/jquery.fancybox.min.js' %}"></script>
+    <script>
+    $(function(){
+        $(".before-after-car-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+    });
+    </script>
+    <!-- Theme Base, Components and Settings -->
+    <script src="{% static 'js/theme.js' %}"></script>
+
+    <!-- Theme Custom -->
+    <script src="{% static 'js/custom.html' %}"></script>
+     <script type="text/javascript">
+        jQuery(function () {
+            setInterval(function () {
+                jQuery("#home .overlay-bg").fadeOut("fast", function () {
+                    jQuery(this).css("background-image", "url(static/images/bg-8-1.jpg)");
+                    jQuery(this).delay(500).fadeIn("fast");
+                });
+            }, 1000);
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+</body>
+
+<!-- Mirrored from leoelectric.in/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:41:52 GMT -->
+</html>

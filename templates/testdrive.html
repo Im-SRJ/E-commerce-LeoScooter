@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">    
+
+<!-- Mirrored from leoelectric.in/testdrive.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:42:26 GMT -->
+<head>
+    <!-- Basic -->    
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Book Test Drive</title>
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    
+    <!-- favicon & bookmark -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&amp;display=swap" rel="stylesheet"> 
+    
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fancybox/jquery.fancybox.min.css' %}" type="text/css" />
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    
+</head>
+<body>
+
+    <!--Main Wrapper Start-->
+    <div class="wrapper" id="top">
+       <!--Header Start -->
+        <header class="main-header menu-absolute transparent light-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 logo">
+                        <a href="{% url 'index' %}" title="Wheels Car">
+                           <img src="{% static 'images/car-dark-logo.png' %}" alt="car" class="regular-logo">
+                            <img src="{% static 'images/car-dark-logo.png' %}" alt="car" class="sticky-logo">
+                        </a>
+                        <div class="menu-icon">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 menu-conainer">
+                        <nav class="site-navigation">
+                            <ul class="main-menu">
+                               <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Leo Electric</a></li>
+                                <li><a href="{% url 'hasten' %}">Hasten</a></li>
+                                <li><a href="{% url 'testdrive' %}">Book Test Drive</a></li>
+                                 <!--
+                                <li class="dropdown">
+                                    <a href="#engine">Specials</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Dropdown menu 1</a></li>
+                                        <li><a href="#">Dropdown menu 2</a></li>
+                                        <li><a href="#">Dropdown menu 3</a></li>
+                                        <li><a href="#">Dropdown menu 4</a></li>
+                                    </ul> 
+                                </li>
+                                -->
+                                <li><a href="{% url 'careers' %}">Careers</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                <li><a href="{% url 'userlogin' %}">Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header End-->
+        <!-- Content Section Start -->   
+       <div class="main-container">
+            <!-- About Section Start -->
+            <section id="about" class="about-section" style="background-color: #eab835;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="img-wrapper">
+                                <img src="{% static 'images/image-1.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 about-text">
+                            <div class="heading-wrapper">
+                                <h2 class="large-heading text-uppercase" style="color: #fff;"><span style="color: #fff;">TEST DRIVE AT</span> YOUR DOOR STEP</h2>
+                            </div>
+                            <div class="text-block">
+                                <p style="color: #000;">Let us bring our dealership to you! If you’re interested in LEO Electric, you now have the option to test drive right at your doorstep. From the comfort of your own home, you can schedule to have one of our Test Drive Agent / Associate, deliver the test drive straight to you.</p>
+
+                                <p style="color: #000;">1.	Browse through our website www.Leoelectric.in, see what you would like to test drive.<br>
+2.	Complete the form with your name and contact information.<br>
+3.	Receive a phone call or an email from a member of our sales team to confirm the details of your test drive!
+</p>
+                           <p style="color: #000;">During your scheduled appointment, our Sales Associate will be with you every step of the way answering any questions that you may have about your dream vehicle.</p>
+                            </div>
+                            <div class="btn-wrapper">
+                                <a href="#book" class="btn btn-primary has-icon"><span>Book Now</span><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Section End -->
+            <section id="accessories" class="accessories-section pb-0" style="padding-top: 80px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 text-center">
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase text">Save Your Precious Time and Money </h2>
+                            </div>
+                            <div class="text-block text-lead">
+                                <p>In an age where time is a rare commodity, buying online provides massive time savings to the customers, buying online makes sense to be able to buy where you already are. Online buying is when you want from where you want is far preferable (and a whole lot safer) than heading out in this COVID reality we’re now living in.Can avoid contacting many, No need to head out, wait in line, and then journey back home when you can access a greater services at a affordable price from the comfort of home.</p>
+                            </div>
+                            
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase">Door Step Test Drive Option</h2>
+                            </div>
+                            <div class="text-block text-lead">
+                                <p>One of the major advantages of buying a electric two wheeler online is you can experience the Two-wheeler yourself before making a buy. Testing is very important because it will determine if Leo Electric is at par with others when it comes to performance. </p>
+                                
+                            </div>
+                            
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase">Our Service</h2>
+                            </div>
+                            <div class="text-block text-lead">
+                                <p>1.	Our services will be provided within the radius of 10kms.<br>
+2.	All our service executives are well trained by the company<br>
+3.	In case of any servicing, our clients are requested to visit only the certified technicians/mechanics.<br>
+4.	Certified service executives/mechanics list will be available soon.
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--form-->
+                <div class="col-lg-6 bookform">
+                            <div class="form-wrapper">
+                                <form action="" method="POST">
+                                {% csrf_token %}>
+                                     <div class="form-row">
+                                        <div class="form-group col-lg-6 col-sm-6">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                        </div>
+                                        <div class="form-group col-lg-6 col-sm-6">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                        </div>
+                                        <div class="form-group col-lg-6 col-sm-6">
+                                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Contact Number">
+                                        </div>
+                                        <div class="form-group col-lg-6 col-sm-6">
+                                            <input type="text" class="form-control" id="modal" name="bikemodel" placeholder="Bike Modal">
+                                        </div>
+                                        <div class="form-group col-lg-6 col-sm-6">
+                                            <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                                        </div>
+                                        <div class="form-group col-lg-6 col-sm-6">
+                                            <input type="text" class="form-control" id="zip" name="zipcode" placeholder="Zip Code">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <textarea class="form-control" id="question" name="question" placeholder="Your Question"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12 text-center">
+                                            <input type="submit" value="Send" class="btn btn-primary border-btn">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                <!--form end-->
+            </section>
+       </div>
+        <!-- Content Section End -->   
+         <!--footer Start-->   
+        <footer class="site-footer">
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-contet">
+                                    <img src="{% static 'images/car-dark-logo.png' %}" class="footer-logo" alt="">
+                                    <p style="color: var(--dark-gray-2);">LEO ELECTRIC Is a 100% Indian electric vehicles manufacturing company with a mission of balancing performance, range, driving comfort, guarantee of complete safety and affordability to build electric vehicles in the market with an aim to go green - go electric.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Useful Links</h4>
+                                </div>
+                                <div class="widget-contet footer-menu">
+                                    <ul class="menu">
+                                        <li><a href="{% url 'careers' %}">Careers</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'profile' %}">{{user.username}}</a></li>
+                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                {% else %}
+                                <li><a href="{% url 'userlogin' %}">Login</a></li>
+                                {% endif %}
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Contact Info</h4>
+                                </div>
+                                <div class="widget-contet contact-info">
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-phone"></i>
+                                        <h3>Phone</h3>
+                                        <span><a>18005722339</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <h3>Email</h3>
+                                        <span><a>info@leoelectric.in</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h3>Address</h3>
+                                        <span>Plot No. 157 / 4 / 9,<br> 1st Floor, Kishangarh, Vasant Kunj,<br> Delhi - 110070 <br> Landmark: Ambience Tower.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <div class="container">
+                    <div class="copyright-text">© 2021 Leo Electric all Rights Reserved &nbsp; Website Design  by: &nbsp;<a target="" href="javascript:void(0)">Cyberflax Technologies</a></div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->  
+    </div>
+    <!--Main Wrapper End-->
+    <!-- Vendor -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/cascading-select.js' %}"></script>        
+    <script src="{% static 'js/owl.carousel.min.j' %}s"></script>     
+    <script src="{% static 'js/onpagescroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <script src="{% static 'js/fancybox/jquery.fancybox.min.js' %}"></script>
+    <!-- Theme Base, Components and Settings -->
+    <script src="{% static 'js/theme.js' %}"></script>
+
+    <!-- Theme Custom -->
+    <script src="{% static 'js/custom.html' %}"></script>
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+</body>
+
+<!-- Mirrored from leoelectric.in/testdrive.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:42:31 GMT -->
+</html>

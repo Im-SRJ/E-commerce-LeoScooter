@@ -1,0 +1,445 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">    
+
+<!-- Mirrored from leoelectric.in/hasten.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:41:52 GMT -->
+<head>
+    <!-- Basic -->    
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Leo-Electric</title>
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    
+    <!-- favicon & bookmark -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&amp;display=swap" rel="stylesheet"> 
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/twentytwenty.css' %}"  type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fancybox/jquery.fancybox.min.css' %}" type="text/css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    
+</head>
+<body >
+
+    <!--Main Wrapper Start-->
+    <div class="wrapper" id="top">
+        <!--Header Start -->
+        <header class="main-header menu-absolute transparent light-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 logo">
+                        <a href="index.html" title="Wheels Car">
+                            <img src="{% static 'images/car-logo.png' %}" alt="car" class="regular-logo">
+                            <img src="{% static 'images/car-dark-logo.png' %}" alt="car" class="sticky-logo">
+                        </a>
+                        <div class="menu-icon">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 menu-conainer">
+                        <nav class="site-navigation">
+                            <ul class="main-menu">
+                               <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Leo Electric</a></li>
+                                <li><a href="{% url 'hasten' %}">Hasten</a></li>
+                                <li><a href="{% url 'testdrive' %}">Book Test Drive</a></li>
+                                 <!--
+                                <li class="dropdown">
+                                    <a href="#engine">Specials</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Dropdown menu 1</a></li>
+                                        <li><a href="#">Dropdown menu 2</a></li>
+                                        <li><a href="#">Dropdown menu 3</a></li>
+                                        <li><a href="#">Dropdown menu 4</a></li>
+                                    </ul> 
+                                </li>
+                                -->
+                                <li><a href="{% url 'careers' %}">Careers</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'profile' %}">{{user.username}}</a></li>
+                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                {% else %}
+                                <li><a href="{% url 'userlogin' %}">Login</a></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header End-->
+        <!-- Content Section Start -->   
+       <div class="main-container">
+            <!-- Hero Section Start -->
+            <section id="home" class="height-100 hero-section racing-car light-text">
+                <div class="section-background">
+                    <div class="background-wrapper">
+                        <div class="background-inner" style="background-image: url('{% static "images/bg-11.jpg" %}'); background-repeat: no-repeat;background-position: center center; background-size: cover; background-color:#040404;"></div>
+                    </div>
+                </div>
+                <div class="container double-top-padding double-bottom-padding height-100">
+                    <div class="row">
+                        <div class="col-md-12 banner-content text-center">
+                            <h2 class="top-sub-heading">Leo Electric</h2>
+                            <h1 class="large-heading"><span>DRIVE THE FUTURE OF </span> EMOBILITY</h1>
+                        </div>
+                        <div class="animation-text"><span>H</span><span>A</span><span>S</span><span>T</span><span>E</span><span>N</span></div>
+                    </div>
+                </div>
+                
+                <div id="foglayer_01" class="fog">
+                    <div class="image01"></div>
+                    <div class="image02"></div>
+                </div>
+                <div id="foglayer_02" class="fog">
+                    <div class="image01"></div>
+                    <div class="image02"></div>
+                </div>
+                <div id="foglayer_03" class="fog">
+                    <div class="image01"></div>
+                    <div class="image02"></div>
+                </div>
+                <div class="racing-car-animation">
+                    <img src="{% static 'images/racing-car-4.png' %}" alt="" class="wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="1s">
+                </div>
+            </section>
+            <!-- Hero Section End -->
+             <!-- Features Section Start -->
+            <section id="feature" class="features-section gray-bg">
+                <div class="section-background">
+                    <div class="background-wrapper">
+                        <div class="background-inner" style="background-color: #0e0e0e;"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-wrapper text-center">
+                                <h2 class="large-heading text-uppercase fut3"><span>Hasten</span>SMART FEATURES</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-container">
+                    <div class="row features-row">
+                        <div class="col-md-2">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <img src="{% static 'images/features/battery.png' %}" alt="">
+                                </div>
+                                <div class="features-text">
+                                    <h4 class="text-uppercase fut">Easy to Charge Batteries</h4>
+                                    <p class="fut2">Equipped with our new Lithium-ion detachable batteries, charging your Spirnt ++ is simple and portable.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="feature-box offset-y-100">
+                                <div class="feature-icon">
+                                    <img src="{% static 'images/features/noise.png' %}" alt="">
+                                </div>
+                                <div class="features-text">
+                                    <h4 class="text-uppercase fut">Noiseless & Smooth Ride</h4>
+                                    <p class="fut2">With low maintenance, Zero emissions and infinite savings LEO is the smart choice to make, its electric drive makes it noise-free and clean.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <img src="{% static 'images/features/green.png' %}" alt="">
+                                </div>
+                                <div class="features-text">
+                                    <h4 class="text-uppercase fut">A Green Machine</h4>
+                                    <p class="fut2">Vehicle with Zero pollution sustainable and innovative mobility solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="feature-box offset-y-100">
+                                <div class="feature-icon">
+                                    <img src="{% static 'images/features/gear.png' %}" alt="">
+                                </div>
+                                <div class="features-text">
+                                    <h4 class="text-uppercase fut">Low maintenance</h4>
+                                    <p class="fut2">Zero-combustion model means fewer moving parts. That means less chance of parts failing and lowers cost of maintenance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="feature-box offset-y-100">
+                                <div class="feature-icon">
+                                    <img src="{% static 'images/features/certify.png' %}" alt="">
+                                </div>
+                                <div class="features-text">
+                                    <h4 class="text-uppercase fut">Certified by ICAT</h4>
+                                    <p class="fut2">Leo Electric is by ICAT and purely under Make in India Machine. With a government support which also provided Government Subsidy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="feature-box offset-y-100">
+                                <div class="feature-icon">
+                                    <img src="{% static 'images/features/anti.png' %}" alt="">
+                                </div>
+                                <div class="features-text">
+                                    <h4 class="text-uppercase fut">Anti Theft Lock System</h4>
+                                    <p class="fut2">This security will provide the owner with a range of notifications and provides advanced real-time tracking regarding their vehicle.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Features Section End -->
+            
+              <!--gallery-->
+            <section id="video" class="gallery-section light-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="gallery-slider owl-carousel overflow-show">
+                                <div class="item">
+                                    <img src="{% static 'images/h1.png' %}" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/h2.jpg' %}" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/h3.jpg' %}" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/h4.jpg' %}" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="templates/h5.html" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/h6.jpg' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>`
+            <!--gallery end-->
+           
+           <!-- Specifications Section Start -->
+            <section id="technical" class="specifications-section gray-bg">
+                <div class="section-background">
+                    <div class="background-wrapper">
+                        <div class="background-inner" style="background-color: #0e0e0e;"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-wrapper">
+                                <h2 class="large-heading text-uppercase fut3"><span>Hasten</span>Specifications</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tab-section vertical-tab m-top-30">
+                                <!-- Nav tabs -->
+                                <div class="select-filter fut">SPECIFICATIONS</div>
+                                <ul class="nav nav-tabs text-uppercase" role="tablist">
+                                    <li class="nav-item">
+                                        <span class="nav-link active fut" id="engine-tab" data-toggle="tab" href="#engine" role="tab" aria-controls="engine" aria-selected="true">SPECIFICATIONS</span>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <span class="nav-link fut" id="suspension-tab" data-toggle="tab" href="#suspension" role="tab" aria-controls="suspension" aria-selected="false">ACCESSORIES</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="nav-link fut" id="transmission-tab" data-toggle="tab" href="#transmission" role="tab" aria-controls="transmission" aria-selected="false">KEY FEATURES</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="engine" role="tabpanel" aria-labelledby="engine-tab">
+                                        <h3 class="tab-title fut">SPECIFICATIONS</h3>
+                                        <table class="specifications fut2">
+                                            <tr><th scope="row">Max. Speed</th><td>50km/hr</td></tr>
+                                            <tr><th scope="row">Mileage@28AH Battery</th><td>70-80km/charge* </td></tr>
+                                            <tr><th scope="row">Seating Capacity</th><td>Driver+1 </td></tr>
+                                            <tr><th scope="row">Starting System </th><td>Electric Start</td></tr>
+                                            <tr><th scope="row">Wheel Size(Front Rear)</th><td>90×100 - 10 in</td></tr>
+                                            
+                                            <tr><th scope="row">Front & Rear Brakes</th><td>Front- Drum Type, 110mm         Rear- Drum Type, 130mm</td></tr>
+                                            
+                                            <tr><th scope="row">Speedometer</th><td>Latest IC Based Technology</td></tr>
+                                            
+                                            <tr><th scope="row">Motor Details</th><td>BLDC Hub Motor</td></tr>
+                                            
+                                            <tr><th scope="row">Motor Watt</th><td>1000W</td></tr>
+                                            
+                                            <tr><th scope="row">Motor Input Voltage</th><td>60 V</td></tr>
+                                            
+                                            <tr><th scope="row">Controller</th><td>18 Tube/60V</td></tr>
+                                            <tr><th scope="row">Charger</th><td>4A/60V</td></tr>
+                                            <tr><th scope="row">Batteries Type</th><td>Lithium/ VRLA</td></tr>
+                                            <tr><th scope="row">Batteries</th><td>12V/28AH</td></tr>
+                                            <tr><th scope="row">Ground Clearance(Chassis)</th><td>150mm</td></tr>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane" id="suspension" role="tabpanel" aria-labelledby="transmission-tab">
+                                        <h3 class="tab-title fut">ACCESSORIES</h3>
+                                        <table class="specifications fut2">
+                                            <tr><th scope="row">First Aid Kit</th><td>Yes</td></tr>
+                                            
+                                            <tr><th scope="row">Helmet</th><td>Yes</td></tr>
+                                            
+                                            <tr><th scope="row">ORVM</th><td>Yes</td></tr>
+                                            
+                                            <tr><th scope="row">Foot mat</th><td>Yes</td></tr>
+                                            <tr><th scope="row">Ladies Foot Rest</th><td>No</td></tr>
+                                            <tr><th scope="row">Front Leg Guard</th><td>No</td></tr>
+                                            <tr><th scope="row">Rear Leg Guard</th><td>No</td></tr>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane" id="transmission" role="tabpanel" aria-labelledby="suspension-tab">
+                                        <h3 class="tab-title fut">KEY FEATURES</h3>
+                                        <table class="specifications fut2">
+                                            <tr><th scope="row">Front Fork Type </th><td>Yes</td></tr>
+                                            
+                                            <tr><th scope="row">Secuity System</th><td>Yes</td></tr>
+                                            
+                                            <tr><th scope="row">Center Locking System</th><td>Yes</td></tr>
+                                            
+                                            <tr><th scope="row">Handle Lock</th><td>Yes</td></tr>
+                                            <tr><th scope="row">Cabin Box</th><td>Yes</td></tr>
+                                            <tr><th scope="row"> USB Charging</th><td>Yes</td></tr>
+                                            <tr><th scope="row"> Music System</th><td>No</td></tr>
+                                             <tr><th scope="row"> Bulb</th><td>DUAL</td></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Features Section End -->
+          
+       </div>
+        <!-- Content Section End -->   
+        <!--footer Start-->   
+        <footer class="site-footer">
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-contet">
+                                    <img src="{% static 'images/car-dark-logo.png' %}" class="footer-logo" alt="">
+                                    <p style="color: var(--dark-gray-2);">LEO ELECTRIC Is a 100% Indian electric vehicles manufacturing company with a mission of balancing performance, range, driving comfort, guarantee of complete safety and affordability to build electric vehicles in the market with an aim to go green - go electric.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Useful Links</h4>
+                                </div>
+                                <div class="widget-contet footer-menu">
+                                    <ul class="menu">
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About Us</a></li>
+                                        <li><a href="{% url 'testdrive' %}">Book Test Drive</a></li>
+                                        <li><a href="{% url 'careers' %}">Careers</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Contact Info</h4>
+                                </div>
+                                <div class="widget-contet contact-info">
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-phone"></i>
+                                        <h3>Phone</h3>
+                                        <span><a>18005722339</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <h3>Email</h3>
+                                        <span><a>info@leoelectric.in</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h3>Address</h3>
+                                        <span>Plot No. 157 / 4 / 9,<br> 1st Floor, Kishangarh, Vasant Kunj,<br> Delhi - 110070 <br> Landmark: Ambience Tower.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <div class="container">
+                    <div class="copyright-text">© 2021 Leo Electric all Rights Reserved &nbsp; Website Design  by: &nbsp;<a target="" href="javascript:void(0)">Cyberflax Technologies</a></div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->   
+    </div>
+    <!--Main Wrapper End-->
+    <!-- Vendor -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/cascading-select.js' %}"></script>        
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>     
+    <script src="{% static 'js/onpagescroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+    <script src="{% static 'js/fancybox/jquery.fancybox.min.js' %}"></script>
+    <script>
+    $(function(){
+        $(".before-after-car-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+    });
+    </script>
+    <!-- Theme Base, Components and Settings -->
+    <script src="{% static 'js/theme.js' %}"></script>
+
+    <!-- Theme Custom -->
+    <script src="{% static 'js/custom.html' %}"></script>
+    <script type="text/javascript">
+        jQuery(window).load(function(){
+            jQuery('.hero-section').addClass('start-animation');
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+</body>
+
+<!-- Mirrored from leoelectric.in/hasten.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:42:22 GMT -->
+</html>

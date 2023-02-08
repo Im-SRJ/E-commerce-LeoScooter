@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+<!-- Mirrored from leoelectric.in/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:42:31 GMT -->
+
+<head>
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Product Details</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- favicon & bookmark -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.html' %}" type="image/x-icon">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/fancybox/jquery.fancybox.min.css' %}" type="text/css" />
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+    <style type="text/css">
+        .plans {
+            background-color: green !important;
+        }
+
+        .plans:hover {
+            background-color: orange !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--Main Wrapper Start-->
+    <div class="wrapper" id="top">
+        <!--Header Start -->
+        <header class="main-header menu-absolute transparent light-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 logo">
+                        <a href="index.html" title="Wheels Car">
+                            <img src="{% static 'images/car-dark-logo.png' %}" alt="car" class="regular-logo">
+                            <img src="{% static 'images/car-dark-logo.png' %}" alt="car" class="sticky-logo">
+                        </a>
+                        <div class="menu-icon">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 menu-conainer">
+                        <nav class="site-navigation">
+                            <ul class="main-menu">
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Leo Electric</a></li>
+                                <li><a href="{% url 'hasten' %}">Hasten</a></li>
+                                <li><a href="{% url 'testdrive' %}">Book Test Drive</a></li>
+                                <!--
+                                <li class="dropdown">
+                                    <a href="#engine">Specials</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Dropdown menu 1</a></li>
+                                        <li><a href="#">Dropdown menu 2</a></li>
+                                        <li><a href="#">Dropdown menu 3</a></li>
+                                        <li><a href="#">Dropdown menu 4</a></li>
+                                    </ul> 
+                                </li>
+                                -->
+                                <li><a href="{% url 'careers' %}">Careers</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'profile' %}">{{user.username}}</a></li>
+                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                {% else %}
+                                <li><a href="{% url 'userlogin' %}">Login</a></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header End-->
+        <!--Product Details Start-->
+        <div class="container py-24">
+            <div class="row mt-5">
+                <div class="col-sm-6">
+                    <h4>Order Summary</h4>
+                    <hr>
+                    {% for item in cart_items %}
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h5>Product: {{item.product.name}}</h5>
+                            <p>Quantity: {{item.quantity}}</p>
+                            <p class="fw-bold">Price: {{item.total_cost}}</p>
+                        </div>
+                    </div>
+                     {% endfor %}
+                     <p class="fw-bold">Total Cost + Shipping Cost = {{totalamount}}</p>
+                    <small>Term and Condition: Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ullam
+                        saepe! Iure optio repellat dolor velit, minus rem. Facilis cumque neque numquam laboriosam,
+                        accusantium adipisci nisi nihil in et quis?</small>
+                </div>
+                <div class="col-sm-4 offset-sm-1">
+                    <h4>Select Shipping Address</h4>
+                    <hr>
+                    <form action="{% url 'paymentdone' %}" method="POST">
+                        {% csrf_token %}
+                        {% for ad in add %}
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>{{ad.name}}</h5>
+                                <p>{{ad.locality}}, {{ad.city}}, {{ad.zipcode}}</p>
+                            </div>
+                        </div>
+                        <div class="form-check mt-2 mb-5">
+                            <input class="form-check-input" type="radio" name="custid" id="custadd{{forloop.counter}}" value="{{ad.id}}" required>
+                            <label class="form-check-label fw-bold" for="">
+                                Address: {{forloop.counter}} </label>
+                        </div>
+                        {% endfor %}
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-warning mt-3 px-5 fw-bold">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Product Details End-->
+        <!--footer Start-->
+        <footer class="site-footer">
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-contet">
+                                    <img src="{% static 'images/car-dark-logo.png' %}" class="footer-logo" alt="">
+                                    <p style="color: var(--dark-gray-2);">LEO ELECTRIC Is a 100% Indian electric
+                                        vehicles manufacturing company with a mission of balancing performance, range,
+                                        driving comfort, guarantee of complete safety and affordability to build
+                                        electric vehicles in the market with an aim to go green - go electric.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Useful Links</h4>
+                                </div>
+                                <div class="widget-contet footer-menu">
+                                    <ul class="menu">
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About Us</a></li>
+                                        <li><a href="{% url 'testdrive' %}">Book Test Drive</a></li>
+                                        <li><a href="{% url 'careers' %}">Careers</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h4 class="widget-title">Contact Info</h4>
+                                </div>
+                                <div class="widget-contet contact-info">
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-phone"></i>
+                                        <h3>Phone</h3>
+                                        <span><a>18005722339</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <h3>Email</h3>
+                                        <span><a>info@leoelectric.in</a></span>
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h3>Address</h3>
+                                        <span>Plot No. 157 / 4 / 9,<br> 1st Floor, Kishangarh, Vasant Kunj,<br> Delhi -
+                                            110070 <br> Landmark: Ambience Tower.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <div class="container">
+                    <div class="copyright-text">© 2021 Leo Electric all Rights Reserved &nbsp; Website Design by:
+                        &nbsp;<a target="" href="javascript:void(0)">Cyberflax Technologies</a></div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->
+    </div>
+    <!--Main Wrapper End-->
+    <!-- Vendor -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/cascading-select.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.j' %}s"></script>
+    <script src="{% static 'js/onpagescroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <script src="{% static 'js/fancybox/jquery.fancybox.min.js' %}"></script>
+    <!-- Theme Base, Components and Settings -->
+    <script src="{% static 'js/theme.js' %}"></script>
+
+    <!-- Theme Custom -->
+    <script src="{% static 'js/custom.html' %}"></script>
+</body>
+
+<!-- Mirrored from leoelectric.in/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jul 2021 18:42:35 GMT -->
+
+</html>
